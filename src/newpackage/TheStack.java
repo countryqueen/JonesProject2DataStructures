@@ -92,14 +92,18 @@ public class TheStack
         //if the head doesn't equal an empty list then this code will run
         if(head!=null)
         {
-            
+            //LinkList temp = head;
             head = head.getLinkList();
+            //int value;
+           // temp =  getValue();
             
         }
         else
         {
           JOptionPane.showMessageDialog(null, "The list is empty.");
         }
+        
+        //return getValue();
 
 
 

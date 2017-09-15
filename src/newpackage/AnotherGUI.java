@@ -34,7 +34,6 @@ public class AnotherGUI extends javax.swing.JFrame {
 
         Push = new javax.swing.JButton();
         Pop = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
@@ -59,14 +58,6 @@ public class AnotherGUI extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.setBackground(new java.awt.Color(204, 255, 255));
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
         jLabel1.setText("Created by Angelica Jones");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -83,9 +74,6 @@ public class AnotherGUI extends javax.swing.JFrame {
                         .addComponent(Push, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(165, 165, 165)
                         .addComponent(Pop, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(220, 220, 220)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(21, 21, 21)
                         .addComponent(jLabel1))
@@ -105,9 +93,7 @@ public class AnotherGUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Push, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Pop, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(45, 45, 45)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
 
         pack();
@@ -116,34 +102,25 @@ public class AnotherGUI extends javax.swing.JFrame {
     private void PushActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PushActionPerformed
         //classmate Luis Vargas suggested I use jOptionPane to receive user input.
         
-        int input =  Integer.parseInt(jTextField1.getText());
-        //String input = JOptionPane.showInputDialog("Enter an integer");
+       // int input =  Integer.parseInt(jTextField1.getText());
+        String input = JOptionPane.showInputDialog("Enter an integer");
         //this variable is used every time user enters an integer
        
-        Stacker.push(input);
+        Stacker.push(Integer.parseInt(input));
         //sets the stacker object to the user input. converted the input to a string.
     }//GEN-LAST:event_PushActionPerformed
 
     private void PopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PopActionPerformed
-       Stacker.pop();
+     //int value = 
+             Stacker.pop();
     }//GEN-LAST:event_PopActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        
-//String input = JOptionPane.showInputDialog("Enter an integer");
-        //this variable is used every time user enters an integer
-       
-        //Stacker.push(Integer.parseInt(input));
-        //sets the stacker object to the user input. converted the input to a string.
-       // jTextField1.setText(input);
-        
-    }//GEN-LAST:event_jTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
+        /* Create and display the form */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
@@ -166,7 +143,6 @@ public class AnotherGUI extends javax.swing.JFrame {
         }
         //</editor-fold>
 
-        /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new AnotherGUI().setVisible(true);
@@ -179,6 +155,5 @@ public class AnotherGUI extends javax.swing.JFrame {
     private javax.swing.JButton Push;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
